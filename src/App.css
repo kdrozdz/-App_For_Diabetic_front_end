@@ -1,0 +1,181 @@
+body {
+  background-color: lightslategrey;
+}
+
+nav.menu > ul {
+  padding: 2vh 0;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  border-bottom: black 2px solid;
+}
+nav > ul > li {
+  font-size: larger;
+}
+
+nav > ul > li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+ul li {
+  list-style-type: none;
+  font-size: 1.2em;
+}
+.add-sugar {
+  font-size: 20px;
+}
+
+.my-sugar-wrapper {
+  display: flex;
+}
+
+.my-sugar-wrapper > ul {
+  flex-grow: 1;
+}
+
+.my-sugar-wrapper > ul:nth-of-type(2) {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.paginate > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.paginate > ul li {
+  padding: 0 15px;
+  /* max-width: 3px; */
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.active {
+  font-size: 2rem;
+}
+.Mylist {
+  display: flex;
+  justify-content: space-between;
+}
+.Mylist > div:nth-of-type(2) {
+  text-align: center;
+}
+.Mylist > div {
+  flex-grow: 1;
+}
+
+.msg {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.btn-msg {
+  margin: 2% auto;
+  width: 25%;
+}
+
+.msg > nav.paginate > ul {
+  border-top: black solid 2px;
+  justify-content: center;
+  padding-left: 0;
+  text-align: center;
+}
+
+.conv-li,
+.conv-li-rev {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-direction: row-reverse;
+  align-content: flex-start;
+  border: black 1px solid;
+  border-radius: 30px;
+  padding: 1.2rem;
+  width: 50%;
+  margin-left: auto;
+}
+
+.conv-li-rev {
+  flex-direction: row;
+  margin-left: 0;
+}
+.conv-li-rev > span.patient-doctor-msg,
+.conv-li span.patient-doctor-msg {
+  width: 50%;
+  font-size: 1.2rem;
+  overflow-wrap: break-word;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.patient-doctor-create {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+span.my {
+  text-align: left;
+  color: blue;
+}
+
+span.other {
+  text-align: left;
+  color: red;
+}
+
+.patient-doctor-is_new {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+ul.conv {
+  padding-left: 0;
+  min-height: 50vh;
+  width: 100%;
+}
+
+.doctor-msg {
+  width: 60%;
+}
+
+.paginate {
+  padding-bottom: 5px;
+}
+.start {
+  display: flex;
+  width: 100%;
+}
+
+.info {
+  width: 50%;
+  flex-grow: 2;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-top: 5%;
+}
+#login {
+  width: 50%;
+  flex-grow: 2;
+  text-align: center;
+}
+
+button {
+  padding: 0.8vh 0.8vw;
+  text-decoration: underline;
+  font-weight: bold;
+  border: none;
+  margin: 1px 1px;
+  background: rgb(245, 255, 250);
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+}

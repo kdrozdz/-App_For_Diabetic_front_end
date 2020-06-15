@@ -1,0 +1,10 @@
+node_modules/
+build/
+.git/
+git/
+.gitignore
+.editorconfi
+Dockerfile
+README.md
+build
+node_modules
