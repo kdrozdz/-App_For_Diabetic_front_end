@@ -91,7 +91,7 @@ const Email = () => {
           getMsg(id, doctorUserId);
         }}
       >
-        Odświeżanie
+        Refresh
       </button>
       <Conversation
         SecondUserMsg={SecondUserMsg}

@@ -57,10 +57,10 @@ const MySugar = (props) => {
         />
       </ul>
       <ul>
-        <li>Średnia: {patient.avg_sugar}</li>
-        <li>Średnia 10 ostatnich: {patient.avg_sugar_10} </li>
-        <li>Średnia naczczo : {patient.avg_no_meal}</li>
-        <li>Liczba pomiarów {all_sugar_rev.length}</li>
+        <li>Average: {patient.avg_sugar}</li>
+        <li>Average last 10: {patient.avg_sugar_10} </li>
+        <li>Average of fasting blood sugar: {patient.avg_no_meal}</li>
+        <li>Number of measurements {all_sugar_rev.length}</li>
       </ul>
     </div>
   );

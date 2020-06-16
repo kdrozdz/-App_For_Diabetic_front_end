@@ -21,8 +21,8 @@ const Msg = ({ item }) => {
 
   return (
     <li className={+item.sender === +id ? "conv-li" : "conv-li-rev"}>
-      <span className={+item.sender === +id ? "my" : "other"}>
-        {+item.sender === +id ? "Ja" : "Odbiorca"}
+      <span className={+item.sender === +id ? "My" : "Recipient"}>
+        {+item.sender === +id ? "My" : "Recipient"}
       </span>
       <span className="patient-doctor-msg">{item.msg}</span>
       <span className="patient-doctor-create">
@@ -30,7 +30,7 @@ const Msg = ({ item }) => {
       </span>
       {+item.reciver === +id ? (
         <span className="patient-doctor-is_new">
-          Przeczytałem
+          Read
           <input
             type="checkbox"
             value={isNew}

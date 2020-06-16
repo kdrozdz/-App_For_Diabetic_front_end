@@ -21,7 +21,7 @@ const Login = () => {
 
   const logto = (e) => {
     if (isLoing) {
-      setMsg("Ładuję dane !!");
+      setMsg("It's loading a data !!");
       Axios.post(`${url}/auth/`, {
         username,
         password,
@@ -54,7 +54,7 @@ const Login = () => {
     <div className="start">
       <div id="login">
         {msg && <p>{msg}</p>}
-        {isLoing ? <h1>Login</h1> : <h1>Zarejestruj sie</h1>}
+        {isLoing ? <h1>Login</h1> : <h1>Register</h1>}
         <span>Login</span> <br />
         <input
           type="text"
@@ -63,7 +63,7 @@ const Login = () => {
           onChange={(e) => setUserName(e.target.value)}
         />
         <br />
-        <span>Hasło</span> <br />
+        <span>Password</span> <br />
         <input
           type="text"
           name="password"
@@ -73,7 +73,7 @@ const Login = () => {
         {!isLoing && (
           <>
             <br />
-            <span>Powtórz Hasło</span> <br />
+            <span>Password again</span> <br />
             <input
               type="text"
               name="password2"
@@ -81,16 +81,16 @@ const Login = () => {
               onChange={(e) => setPassword2(e.target.value)}
             />
             <br />
-            <span>Czy jesteś lekarzem ?</span>
+            <span>Are you doctor ?</span>
             <input type="checkbox" onChange={(e) => setIsStaff(!is_staff)} />
           </>
         )}
         <br />
         <br />
-        <button onClick={logto}>{isLoing ? "Zaloguj" : "Zarejestruj"}</button>
+        <button onClick={logto}>{isLoing ? "Login" : "Register"}</button>
         <br />
         <button onClick={() => setIsLogin(!isLoing)}>
-          {!isLoing ? "Zaloguj" : "Zarejestruj"}
+          {!isLoing ? "Login" : "Register"}
         </button>
       </div>
       <div className="info">

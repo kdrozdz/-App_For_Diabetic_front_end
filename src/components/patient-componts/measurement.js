@@ -15,7 +15,7 @@ const Measurement = ({ level, date, without_a_meal }) => {
   return (
     <li>
       <p className="sugar-level">
-        Poziom: {level} Naczczo: {without_a_meal ? "Tak" : "Nie"}
+        Level: {level} Fasting blood sugar: {without_a_meal ? "Yes" : "No"}
         <br />
         {time}
         {dateToDisp} <br />

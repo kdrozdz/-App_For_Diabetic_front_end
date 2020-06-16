@@ -19,9 +19,9 @@ const BtnAction = ({
           take_user_name && take_user_name(patient.user.username);
         }}
       >
-        {add && "Dodaj"}
-        {detail && "Szczegóły"}
-        {msg && "Wiadomości"}
+        {add && "Add"}
+        {detail && "Detail"}
+        {msg && "Messages"}
       </button>
       {/* second bt */}
       {actionSecond && (
@@ -30,7 +30,7 @@ const BtnAction = ({
             actionSecond(patient.user.id);
           }}
         >
-          Usuni
+          Remove
         </button>
       )}
       {/* {info_of_msg} */}

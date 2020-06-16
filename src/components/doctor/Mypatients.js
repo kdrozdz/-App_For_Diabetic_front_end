@@ -18,7 +18,7 @@ const Mypatients = () => {
       headers: auth,
     })
       .then((res) => setmyList(res.data))
-      .catch((res) => alert(`Coś nie tak ${res.data}`));
+      .catch((res) => alert(`Error ${res.data}`));
   };
 
   const RemovePatient = (userId) => {
@@ -35,7 +35,7 @@ const Mypatients = () => {
         getMyList();
         setPatientDetail(false);
       })
-      .catch((res) => alert("coś nie tak"));
+      .catch((res) => alert("Error"));
   };
 
   const getPatientDetail = (id) => {
@@ -89,12 +89,14 @@ const Mypatients = () => {
         {patientDetail && (
           <div className="my-sugar-wrapper">
             <ul>
-              <li>Nazwa: {patientDetail.user.username}</li>
+              <li>Name: {patientDetail.user.username}</li>
               <br />
-              <li>Średnia: {patientDetail.avg_sugar}</li>
-              <li>Średnia 10 ostatnich: {patientDetail.avg_sugar_10} </li>
-              <li>Średnia naczczo : {patientDetail.avg_no_meal}</li>
-              <li>Liczba pomiarów {all_sugar_rev.length}</li>
+              <li>Average: {patientDetail.avg_sugar}</li>
+              <li>Average last 10: {patientDetail.avg_sugar_10} </li>
+              <li>
+                Average of fasting blood sugar : {patientDetail.avg_no_meal}
+              </li>
+              <li>Number of measurements {all_sugar_rev.length}</li>
             </ul>
             <ul>
               {currentPosts.map((item) => (

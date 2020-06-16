@@ -31,8 +31,7 @@ const Li = (props) => {
   return (
     <>
       <li onClick={change}>
-        {props.name}{" "}
-        {props.name === "Moje wiadomośći" ? `Nowe: ${new_msg}` : null}
+        {props.name} {props.name === "My messages" ? `New: ${new_msg}` : null}
       </li>
     </>
   );

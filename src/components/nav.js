@@ -7,8 +7,8 @@ const Nav = (props) => {
   };
 
   const opitons = props.user
-    ? ["Dodaj pacjeta", "Moi pacjenci", `Moje wiadomośći`, "Wyloguj"]
-    : ["Dodaj cukier", "Mój cukeri", "Moje wiadomośći", "Wyloguj"];
+    ? ["Add patient", "My patients", `My messages`, "Logout"]
+    : ["Add sugar", "My sugars", "My messages", "Logout"];
 
   return (
     <>

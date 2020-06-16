@@ -9,20 +9,20 @@ const Doctor = (props) => {
   const [typLi, setTypeLi] = useState("");
   const renderSwitch = (param) => {
     switch (param) {
-      case "Dodaj pacjeta":
+      case "Add patient":
         return <AddPatient />;
 
-      case `Moje wiadomośći`:
+      case `My messages`:
         return <DoctorListMsg />;
 
-      case "Moi pacjenci":
+      case "My patients":
         return <Mypatients />;
 
-      case "Wyloguj":
+      case "Logout":
         return <Logout />;
 
       default:
-        return "Witam ";
+        return "Welcome !";
     }
   };
   return (

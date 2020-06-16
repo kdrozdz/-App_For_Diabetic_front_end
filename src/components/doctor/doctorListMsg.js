@@ -23,7 +23,7 @@ const DoctorListMsg = () => {
     })
       .then((res) => setmyList(res.data))
       .then((res) => get_new_msg_detail(id, setNewMsg))
-      .catch((res) => alert(`Coś nie tak ${res.data}`));
+      .catch((res) => alert(`Error ${res.data}`));
   };
 
   const getMsg = (rId, sId) => {
@@ -99,7 +99,7 @@ const DoctorListMsg = () => {
       {patientmsg && (
         <div className="doctor-msg">
           <div className="msg">
-            <label htmlFor="msg">Wiadmość do pacjeta {patientName}</label>
+            <label htmlFor="msg">Message to {patientName}</label>
             <textarea
               value={msg}
               onChange={(e) => setMsg(e.target.value)}
@@ -112,11 +112,11 @@ const DoctorListMsg = () => {
                 sendMsg(id, patientId, msg, setMsg);
                 setTimeout(() => {
                   getMsg(patientId, id);
-                }, 500);
+                }, 200);
               }}
               className="btn-msg"
             >
-              Wyślij
+              Send
             </button>
             <button
               className="btn-msg"
@@ -124,7 +124,7 @@ const DoctorListMsg = () => {
                 getMsg(patientId, id);
               }}
             >
-              Odświeżanie
+              Refresh
             </button>
             <Conversation patientId currentPosts={currentPosts} />
             <Pagination

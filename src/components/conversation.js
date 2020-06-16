@@ -1,7 +1,7 @@
 import React from "react";
 import Msg from "./msg";
 
-const conversation = ({ currentPosts, SecondUserMsg, patientId }) => {
+const conversation = ({ currentPosts, SecondUserMsg }) => {
   return (
     <ul className="conv">
       {currentPosts.map((item) => (

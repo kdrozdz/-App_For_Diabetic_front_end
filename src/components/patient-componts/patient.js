@@ -25,24 +25,24 @@ const Patient = () => {
 
   const renderSwitch = (param) => {
     switch (param) {
-      case "Dodaj cukier":
+      case "Add sugar":
         return <AddSugar />;
 
-      case "Moje wiadomośći":
+      case "My messages":
         if (user.doctor) {
           return <Email />;
         } else {
-          return "Jeszcze nie masz przypisanego lekarza";
+          return "You don't have a doctor yet";
         }
 
-      case "Mój cukeri":
+      case "My sugars":
         return <MySugar />;
 
-      case "Wyloguj":
+      case "Logout":
         return <Logout />;
 
       default:
-        return `Witaj pacjencie `;
+        return `Welcome patient `;
     }
   };
   return (

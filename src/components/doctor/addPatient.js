@@ -28,7 +28,7 @@ const AddPatient = () => {
       }
     )
       .then((res) => getList())
-      .catch((res) => alert("Coś nie tak!"));
+      .catch((res) => alert("Error!"));
   };
 
   useEffect(() => {

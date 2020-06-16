@@ -26,14 +26,14 @@ const AddSugar = () => {
         setMsg(true);
       });
     } else {
-      alert("Coś nie tak z cukrem !");
+      alert("Wrong values");
     }
   };
 
   return (
     <div className="add-sugar">
       <br />
-      <label htmlFor="level">Poziom cukru </label>
+      <label htmlFor="level">Sugar level </label>
       <input
         onChange={(e) => setSugar(e.target.value)}
         type="number"
@@ -42,16 +42,18 @@ const AddSugar = () => {
       />
 
       <br />
-      <label htmlFor="meal">Czy było to na czczo? </label>
+      <label htmlFor="meal">
+        Was it whithout food (fasting blood sugar) ?{" "}
+      </label>
       <input
         onChange={(e) => setithoutAMeal(!withoutAMeal)}
         type="checkbox"
         id="meal"
       />
       <br />
-      <button onClick={sendSugar}>Wyślij</button>
+      <button onClick={sendSugar}>Send </button>
       <br />
-      {okMsg && <h1>Dodano pomiar!</h1>}
+      {okMsg && <h1>Added measurement !</h1>}
     </div>
   );
 };
